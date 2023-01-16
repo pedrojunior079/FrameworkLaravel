@@ -28,3 +28,7 @@ Route::any('/any', function(){
 Route::match(['put', 'delet'],'/match', function(){
     return "Permite apenas acessos definidos";
 });
+
+Route::get('/produto/{id}/{cat}', function($id, $cat){
+    return "O id do produto é:".$id. "<br>"."A categoria é:".$cat;
+});
